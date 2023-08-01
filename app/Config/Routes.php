@@ -36,6 +36,7 @@ $routes->post('/proses_add_pegawai', 'Pegawai::proses_add_pegawai');
 $routes->get('/edit_data_pegawai/(:any)', 'Pegawai::edit_data_pegawai/$1');
 $routes->post('/proses_edit_pegawai', 'Pegawai::proses_edit_pegawai');
 $routes->get('/delete_data_pegawai/(:any)', 'Pegawai::delete_data_pegawai/$1');
+$routes->get('/', 'Dashboard::index');
 
 /*
  * --------------------------------------------------------------------
