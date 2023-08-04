@@ -13,12 +13,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <h1></h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
+              <li class="breadcrumb-item active">Data Pegawai</li>
             </ol>
           </div>
         </div>
@@ -31,25 +31,37 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Title</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
+          <h1 class="card-title">Data Pegawai</h1>
         </div>
         <div class="card-body">
-          Start creating your amazing application!
+        <div class="container">
+        <h1>Data Pegawai</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nama Pegawai</th>
+                    <th scope="col">Nomor Pegawai</th>
+                    <th scope="col">Tanggal Bergabung</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($all_data_pegawai as $pegawai) : ?>
+                    <tr>
+                        <td><?= $pegawai->nama_pegawai ?></td>
+                        <td><?= $pegawai->nomor_pegawai ?></td>
+                        <td><?= $pegawai->tanggal_bergabung ?></td>
+                        <td><a href="<?= base_url('edit_data_pegawai').'/'.$pegawai->id ?>" class="btn btn-info btn-sm"> Update</a> <a href="<?= base_url('delete_data_pegawai').'/'.$pegawai->id ?>" class="btn btn-info btn-sm"> Delete</a></td>
+                    </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
+        <br>
+        <a href="<?= base_url('add_data_pegawai') ?>" class="btn btn-primary"> Tambah Data Pegawai</a>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
       </div>
       <!-- /.card -->
 
