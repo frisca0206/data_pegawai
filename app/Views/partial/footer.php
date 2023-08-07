@@ -26,8 +26,8 @@
 <!-- Bootstrap 4 -->
 <script src="adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="adminLTE/dist/js/adminlte.min.js"></script>
+<script src="adminLTE/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="adminLTE/dist/js/demo.js"></script>
+<!-- <script src="adminLTE/js/demo.js"></script> -->
 </body>
 </html>
