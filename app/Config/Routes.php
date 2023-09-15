@@ -29,14 +29,16 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashboard::index');
+$routes->get('/', 'Home::index');
 // => default controller
-$routes->get('/pegawai', 'Pegawai::index');
-$routes->get('/add_data_pegawai', 'Pegawai::add_data_pegawai');
-$routes->post('/proses_add_pegawai', 'Pegawai::proses_add_pegawai');
-$routes->get('/edit_data_pegawai/(:num)', 'Pegawai::edit_data_pegawai/$1');
-$routes->post('/proses_edit_pegawai', 'Pegawai::proses_edit_pegawai');
-$routes->get('/delete_data_pegawai/(:any)', 'Pegawai::delete_data_pegawai/$1');
+$routes->get('dashboard', 'DashboardController::index',['as' => 'dashboard']);
+
+$routes->get('/pegawai', 'PegawaiController::index',['as' => 'pegawai']);
+$routes->get('/pegawai/edit/(:num)', 'PegawaiController::edit/$1',['as' => 'pegawai-edit']);
+$routes->get('/pegawai/delete/(:num)', 'PegawaiController::delete/$1',['as' => 'pegawai-delete']);
+$routes->get('/pegawai/create', 'PegawaiController::create',['as' => 'pegawai-create']);
+$routes->post('/pegawai/store', 'PegawaiController::store',['as' => 'pegawai-store']);
+$routes->post('/pegawai/update', 'PegawaiController::update',['as' => 'pegawai-update']);
 
 /*
  * --------------------------------------------------------------------
