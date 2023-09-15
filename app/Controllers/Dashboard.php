@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Models\PegawaiModel;
 
 class Dashboard extends BaseController
@@ -14,10 +16,10 @@ class Dashboard extends BaseController
         ];
 
         $header['title']='Dashboard';
-        echo view('partial/header',$header);
-        echo view('partial/top_menu');
-        echo view('partial/side_menu');
+        echo view('layouts/header',$header);
+        echo view('layouts/top_menu');
+        echo view('layouts/side_menu');
         echo view('dashboard', $data);
-        echo view('partial/footer');
+        echo view('layouts/footer');
     }
 }

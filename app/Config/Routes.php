@@ -30,10 +30,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Dashboard::index');
+// => default controller
 $routes->get('/pegawai', 'Pegawai::index');
 $routes->get('/add_data_pegawai', 'Pegawai::add_data_pegawai');
 $routes->post('/proses_add_pegawai', 'Pegawai::proses_add_pegawai');
-$routes->get('/edit_data_pegawai/(:any)', 'Pegawai::edit_data_pegawai/$1');
+$routes->get('/edit_data_pegawai/(:num)', 'Pegawai::edit_data_pegawai/$1');
 $routes->post('/proses_edit_pegawai', 'Pegawai::proses_edit_pegawai');
 $routes->get('/delete_data_pegawai/(:any)', 'Pegawai::delete_data_pegawai/$1');
 
