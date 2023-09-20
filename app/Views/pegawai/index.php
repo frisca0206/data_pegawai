@@ -30,7 +30,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="pegawai_table" class="table table-bordered table-hover">
+                            <table id="pegawai_table" class="table table-bordered table-hover masterdata-datatable">
                                 <thead>
                                     <tr>
                                         <th>Nama Pegawai</th>
